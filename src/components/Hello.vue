@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
+    <HeaderComponent></HeaderComponent>
     <h1>{{ msg }}</h1>
+    <OtherComponent></OtherComponent>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,14 +23,19 @@
 </template>
 
 <script>
+import HeaderComponent from './header'
+import OtherComponent from './other'
 export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+    data(){
+      return {
+        msg: 'Hello Vue.js!'
+        }
+    },
+    components:{
+      HeaderComponent, OtherComponent
     }
-  }
 }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -50,4 +57,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>

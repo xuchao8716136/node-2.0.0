@@ -10,9 +10,9 @@ Vue.use(VueRouter);
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  // el: '#app',
   template: '<App/>',
   components: { App }
-});
+}).$mount('#app');
 
 
