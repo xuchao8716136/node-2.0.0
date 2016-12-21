@@ -10,6 +10,7 @@
       <ol>
         <li v-for='i in items'  :class="{finished: i.isFinished}" @click="toggleFinish(i)">
           {{ i.text }}
+          <button @click="delete">delete</button>
         </li>
       </ol>
     </div>
@@ -20,23 +21,34 @@
 <script>
 import HeaderComponent from './header'
 import OtherComponent from './other'
-
+import Store from '../store'
+console.log(Store)
 export default {
     data(){
       return {
         msg: 'This is a todo list',
-        items:[],
+        items:Store.fetch() == null ? []:Store.fetch(),
         liClass:'this is li class',
         newItem:''
+        }
+    },
+    watch:{
+        items:{
+          handler: function (items){
+            console.log(items)
+            Store.save(items)
+          },
+          deep:true
         }
     },
     methods:{
       toggleFinish:function(i){
         i.isFinished = !i.isFinished;
       },
+
       addNew:function(){
         this.items.push({
-          text: this.newItem + new Date(),
+          text: this.newItem,
           isFinished:false
         })
         this.newItem = '';

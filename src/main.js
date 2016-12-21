@@ -8,9 +8,9 @@ import App from './App'
 
 Vue.use(VueRouter);
 
-/* eslint-disable no-new */
 new Vue({
-  // el: '#app',
   template: '<App/>',
   components: { App }
 }).$mount('#app');
+
+// 从父往子控件传输数据 props
