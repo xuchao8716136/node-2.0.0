@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>this is template end</div>
+    <div>what to do...</div>
   </div>
 </template>
 <style scoped>

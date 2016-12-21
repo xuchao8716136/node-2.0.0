@@ -1,18 +1,19 @@
-# node
+# Small Todo List
 
-> A Vue.js project
+> A Vue.js project from imooc 
+
+'imooc'
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖包
 npm install
 
-# serve with hot reload at localhost:8080
+# 服务将会在8080端口启动
 npm run dev
 
-# build for production with minification
+# 最小化构建
 npm run build
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+***

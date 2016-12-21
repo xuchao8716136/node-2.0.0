@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div>this is template body</div>
+        <div>Small Vue.app</div>
     </div>
 </template>
 <style scoped>

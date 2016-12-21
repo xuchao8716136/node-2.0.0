@@ -14,5 +14,3 @@ new Vue({
   template: '<App/>',
   components: { App }
 }).$mount('#app');
-
-
